@@ -2,11 +2,18 @@ package com.tesji.estoico.pojo;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("facturaBean")
 public class Factura {
 
 	private String rfcEmisor;
 	private String rfcReceptor;
 	private BigDecimal montoTotal;
+	
+	@Autowired
 	private ComplementoPago complementoPago;
 
 	public Factura() {
@@ -22,7 +29,8 @@ public class Factura {
 		return rfcEmisor;
 	}
 
-	public void setRfcEmisor(String rfcEmisor) {
+	@Autowired
+	public void setRfcEmisor(@Value("CAME4567433") String rfcEmisor) {
 		this.rfcEmisor = rfcEmisor;
 	}
 
@@ -30,15 +38,18 @@ public class Factura {
 		return rfcReceptor;
 	}
 
-	public void setRfcReceptor(String rfcReceptor) {
+	@Autowired
+	public void setRfcReceptor(@Value("HGT98744678")String rfcReceptor) {
 		this.rfcReceptor = rfcReceptor;
 	}
 
+	
 	public BigDecimal getMontoTotal() {
 		return montoTotal;
 	}
 
-	public void setMontoTotal(BigDecimal montoTotal) {
+	@Autowired
+	public void setMontoTotal(@Value("10000")BigDecimal montoTotal) {
 		this.montoTotal = montoTotal;
 	}
 	

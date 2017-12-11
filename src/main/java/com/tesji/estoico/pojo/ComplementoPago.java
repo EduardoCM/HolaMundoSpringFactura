@@ -2,10 +2,20 @@ package com.tesji.estoico.pojo;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class ComplementoPago {
 
+	
 	private long idFactura;
+	
+	
 	private BigDecimal monto;
+	
+	
 	private String moneda;
 
 	public ComplementoPago() {
@@ -22,7 +32,8 @@ public class ComplementoPago {
 		return idFactura;
 	}
 
-	public void setIdFactura(long idFactura) {
+	@Autowired
+	public void setIdFactura(@Value("1234568")long idFactura) {
 		this.idFactura = idFactura;
 	}
 
@@ -30,7 +41,8 @@ public class ComplementoPago {
 		return monto;
 	}
 
-	public void setMonto(BigDecimal monto) {
+	@Autowired
+	public void setMonto(@Value("10000")BigDecimal monto) {
 		this.monto = monto;
 	}
 
@@ -38,7 +50,8 @@ public class ComplementoPago {
 		return moneda;
 	}
 
-	public void setMoneda(String moneda) {
+	@Autowired
+	public void setMoneda(@Value("MXN")String moneda) {
 		this.moneda = moneda;
 	}
 

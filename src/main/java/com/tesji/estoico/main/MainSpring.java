@@ -13,7 +13,7 @@ public class MainSpring {
 		
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("spring-context.xml");
 		
-		Factura factura = (Factura) appContext.getBean("factura");
+		Factura factura = (Factura) appContext.getBean("facturaBean");
 		
 		System.out.println(factura);
 		

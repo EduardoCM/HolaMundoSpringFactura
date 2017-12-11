@@ -4,23 +4,23 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
+	<context:component-scan base-package="com.tesji.estoico.pojo"></context:component-scan>
 
 	<!-- DI get y set -->
+	<!--  
 	<bean id="factura" class="com.tesji.estoico.pojo.Factura">
 		<property name="rfcEmisor" value="CAME9008654"></property>
 		<property name="rfcReceptor" value="GFDO76543"></property>
 		<property name="montoTotal" value="200000"></property>
-		<property name="complementoPago" ref="complementoPago"></property>
+		 <property name="complementoPago" ref="complementoPago"></property>
 	</bean>
-	
-	
-	<!--  DI constructor -->
-	<bean id="complementoPago" class="com.tesji.estoico.pojo.ComplementoPago">
-	   <constructor-arg name="idFactura" value="123456789"></constructor-arg>
-	   <constructor-arg name="monto" value="150000"></constructor-arg>
-	   <constructor-arg name="moneda" value="MXN"></constructor-arg>
-	</bean>
+   -->
 
+	<!-- DI constructor -->
 
+	<!-- <bean id="complementoPago" class="com.tesji.estoico.pojo.ComplementoPago"> 
+		<constructor-arg name="idFactura" value="123456789"></constructor-arg> <constructor-arg 
+		name="monto" value="150000"></constructor-arg> <constructor-arg name="moneda" 
+		value="MXN"></constructor-arg> </bean> -->
 
 </beans>
